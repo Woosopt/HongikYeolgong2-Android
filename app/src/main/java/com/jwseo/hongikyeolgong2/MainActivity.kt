@@ -1,4 +1,4 @@
-package com.teamhy2.hongikyeolgong2
+package com.jwseo.hongikyeolgong2
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,15 +11,14 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.teamhy2.designsystem.ui.theme.HY2Theme
-import com.teamhy2.designsystem.ui.theme.White
+import com.jwseo.hongikyeolgong2.ui.theme.HongikYeolgong2Theme
 
 class MainActivity : ComponentActivity() {
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 		enableEdgeToEdge()
 		setContent {
-			HY2Theme {
+			HongikYeolgong2Theme {
 				Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
 					Greeting(
 						name = "Android",
@@ -36,18 +35,13 @@ fun Greeting(
 	name: String,
 	modifier: Modifier = Modifier,
 ) {
-	Text(
-		text = "Hello $name!",
-		color = White,
-		style = HY2Theme.typography.caption,
-		modifier = modifier,
-	)
+	Text(text = "Hello $name!", modifier = modifier)
 }
 
-@Preview(showBackground = false)
+@Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-	HY2Theme {
+	HongikYeolgong2Theme {
 		Greeting("Android")
 	}
 }
